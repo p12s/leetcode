@@ -35,10 +35,6 @@ func countComponents(n int, edges [][]int) int {
 	return len(m)
 }
 
-var (
-	size = 5
-)
-
 func main() {
 	n := 5
 	edges := [][]int{{0, 1}, {1, 2}, {3, 4}}
