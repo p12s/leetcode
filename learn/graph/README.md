@@ -15,3 +15,11 @@
 |-----------------|------------------------|-----------|-----------|--------------|
 | Time Complexity | O(N)                   | O(logN)   | O(logN)   | O(logN)      |
 
+## Disjoint set optimized path compression
+|                 | Union-find Constructor | Find      | Union     | Connected    |
+|-----------------|------------------------|-----------|-----------|--------------|
+| Time Complexity | O(N)                   | O(logN)   | O(logN)   | O(logN)      |
+
+
+
+
