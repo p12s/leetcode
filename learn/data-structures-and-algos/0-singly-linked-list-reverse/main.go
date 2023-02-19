@@ -21,12 +21,14 @@ func (i *Item) Print() {
 }
 
 func main() {
-	if len(os.Args) != 2 {
-		fmt.Println("args not enough: need 2, catched:", len(os.Args))
-		return
-	}
-
-	f, err := os.Open(os.Args[1]) //, os.O_RDONLY, 0666
+	/*
+		if len(os.Args) != 2 {
+			fmt.Println("args not enough: need 2, catched:", len(os.Args))
+			return
+		}
+		f, err := os.Open(os.Args[1])
+	*/
+	f, err := os.Open("data.txt")
 	if err != nil {
 		fmt.Println("file open fail:", err.Error())
 		return
@@ -59,12 +61,12 @@ func main() {
 		it = newItem
 	}
 
-	fmt.Println("start:")
+	fmt.Println("order after read:")
 	it.Print()
 
 	fmt.Println("===")
-	var first, middle, third *Item
 
+	var first, middle, third *Item
 	first = it
 	if it != nil {
 		middle = it.Next
@@ -80,6 +82,6 @@ func main() {
 	}
 	middle.Next = first
 
-	fmt.Println("result:")
+	fmt.Println("order after reverse:")
 	middle.Print()
 }
